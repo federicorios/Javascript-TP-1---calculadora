@@ -1,0 +1,56 @@
+<script>
+	
+function calculadora(operacion,valor1,valor2) {
+
+		var resultado = null;
+		if (valor1 && valor2 != null) {
+
+		switch(operacion) {
+		    case "+":
+		        resultado = (valor1) + (valor2);
+		        console.log(resultado);
+
+		        break;
+		    case "-":
+		        var resultado = (valor1) - (valor2);
+				console.log(resultado);
+		        break;
+		    case "*":
+		        var resultado = (valor1) * (valor2);
+				console.log(resultado);
+		        break;
+		    case "/":
+		        var resultado = (valor1)/(valor2);
+				console.log(resultado);
+		        break;
+		    default: 
+		    	console.log('no se reconoce el simbolo');
+		    	var error = "error";
+		    	return resultado = null;
+		    	break;
+	}
+		
+  		return resultado;
+
+}}
+
+
+  	
+	    var	operacion = prompt("Ingrese el simbolo de la operacion que desea realizar.     (+)(-)(*)(/)");
+		var	valor1 = parseFloat(prompt("Ingrese un valor"));
+		var	valor2 = parseFloat(prompt("Ingrese otro valor"));
+		var resultadoFinal = calculadora( operacion, valor1, valor2);
+		
+			
+			if (isNaN(resultadoFinal)) {
+				 alert('Hubo algun error en los valores');
+			}
+			else{ 
+				 if (resultadoFinal == null) {
+			     alert('no se reconoce el simbolo de la operacion.');
+		        }
+		else{
+			console.log("El resultado final es ",resultadoFinal);
+		};
+	};
+</script>
